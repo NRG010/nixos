@@ -1,14 +1,8 @@
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+_: {
   imports = [
     ./hardware-configuration.nix
 
-    ./nh.nix
+    ./packages.nix
 
     ./bootloader.nix
     ./baldev.nix
@@ -18,7 +12,7 @@
 
     ./audio.nix
     ./nvidia.nix
-    ./networkmanager.nix
+    ./network.nix
   ];
 
   nix = {
@@ -27,8 +21,9 @@
       experimental-features = "nix-command flakes";
 
       substituters = [ "https://hyprland.cachix.org" ];
-      trusted-public-keys =
-      [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+      trusted-public-keys = [
+        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+      ];
     };
   };
 

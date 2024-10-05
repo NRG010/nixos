@@ -1,16 +1,17 @@
 # █▄▀ █▀▀ █▄█ █▄▄ █ █▄░█ █▀▄ █ █▄░█ █▀▀ █▀
 # █░█ ██▄ ░█░ █▄█ █ █░▀█ █▄▀ █ █░▀█ █▄█ ▄█
-_: {
+{ pkgs, ... }: {
   wayland.windowManager.hyprland = {
     settings = {
       # Assign apps
       "$mod" = "SUPER";
+      "$shiftMod" = "SUPER_SHIFT";
+      "$menu" = "wofi";
       "$term" = "kitty";
       "$editor" = "kitty nvim";
       "$file" = "kitty yazi";
-      "$sysmon" = "kitty btop";
       "$browser" = "qutebrowser";
-      "$menu" = "wofi";
+      "$sysmon" = "kitty btop";
       bind = [
         # Application shortcuts
         "$mod, R, exec, $menu"
@@ -19,8 +20,8 @@ _: {
         "$mod, E, exec, $file"
         "$mod, F, exec, $browser"
         "$mod, Escape, exec, $sysmon"
-        # Clipboard
-        "SUPER, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+        "$mod, Q, killactive,"
+        "$mod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
         # Move/Change window focus
         "$mod, H, movefocus, l"
         "$mod, L, movefocus, r"
@@ -30,6 +31,7 @@ _: {
         # Move/Switch to special workspace (scratchpad)
         "$mod+Alt, S, movetoworkspacesilent, special"
         "$mod, S, togglespecialworkspace"
+        "$shiftMod, E, exec, ${pkgs.wofi-emoji}/bin/wofi-emoji" # Emoji picker with wofi
       ]
       # workspaces
         ++ (builtins.concatLists (builtins.genList (i:

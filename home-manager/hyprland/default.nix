@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     $(pkgs.brightnesscli)/bin/brightnesscli s 500 &
@@ -10,6 +10,19 @@ in {
     ./keybindings.nix
     ./layouts.nix
     ./settings.nix
+
+    ./wofi.nix
+  ];
+
+  home.packages = with pkgs; [
+    qt5.qtwayland
+    qt6.qtwayland
+    qt5ct
+    qt6ct
+
+    wofi-emoji
+    wl-clipboard
+    brightnessctl
   ];
 
   wayland.windowManager.hyprland = {

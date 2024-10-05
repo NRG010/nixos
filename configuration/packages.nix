@@ -1,11 +1,8 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
 
   environment = {
     sessionVariables = { FLAKE = "/home/baldev/nixos"; };
-    systemPackages = with pkgs; [
-      nix-output-monitor
-      nvd
-    ];
+    systemPackages = with pkgs; [ nix-output-monitor nvd ];
   };
 
   programs.nh = {

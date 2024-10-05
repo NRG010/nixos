@@ -2,18 +2,16 @@
   imports = [
     ./mpv.nix
     ./git.nix
-    ./wofi.nix
     ./file.nix
     ./shell.nix
     ./sysmon.nix
-    ./cliphish.nix
     ./terminal.nix
+    ./cliphish.nix
     ./gammastep.nix
     ./qutebrowser.nix
   ];
 
   home.packages = with pkgs; [
-
     zip
     unzip
     p7zip
@@ -26,7 +24,5 @@
     poppler
     imagemagick
     ffmpegthumbnailer
-
-    wl-clipboard 
   ];
 }

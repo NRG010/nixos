@@ -1,9 +1,6 @@
 { pkgs, ... }: {
 
-  environment.systemPackages = with pkgs; [
-    brightnessctl
-    base16-schemes
-  ];
+  environment.systemPackages = with pkgs; [ brightnessctl base16-schemes ];
 
   stylix = {
     enable = true;

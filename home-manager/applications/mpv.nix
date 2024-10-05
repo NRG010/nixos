@@ -12,7 +12,6 @@ _: {
     yt-dlp = {
       enable = true;
       settings = {
-        embed-thumbnail = true;
         embed-subs = true;
         sub-langs = "all";
         downloader = "aria2c";

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }: {
+_: {
   # Grub boot loader.
   boot.loader = {
     efi = {
