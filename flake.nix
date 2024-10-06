@@ -5,7 +5,10 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    stylix.url = "github:danth/stylix";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -21,12 +24,7 @@
   outputs = { nixpkgs, stylix, home-manager, ... }@inputs:
 
     let
-      lib = nixpkgs.lib;
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
       extraSpecialArgs = {
         inherit system;
         inherit inputs;
@@ -37,7 +35,7 @@
       };
     in {
       nixosConfigurations = {
-        nixos = lib.nixosSystem {
+        nixos = nixpkgs.lib.nixosSystem {
           inherit specialArgs;
           modules = [
             ./configuration
@@ -50,10 +48,6 @@
                 useUserPackages = true;
                 users.baldev = import ./home-manager;
               };
-            }
-            {
-              environment.systemPackages = with pkgs;
-                [ inputs.nixvim.packages.${system}.default ];
             }
           ];
         };

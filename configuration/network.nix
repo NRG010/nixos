@@ -3,7 +3,8 @@ _: {
     hostName = "nixos";
     networkmanager = { enable = true; };
     firewall = {
-      checkReversePath = false;
+      enable = true;
+      checkReversePath = "loose";
       logReversePathDrops = true;
       extraCommands = ''
         ip46tables -t mangle -I nixos-fw-rpfilter -p udp -m udp --sport 51820 -j RETURN
