@@ -1,12 +1,10 @@
-{ inputs, pkgs, ... }: {
+{pkgs, ... }: {
 
   environment = {
     sessionVariables = { FLAKE = "/etc/nixos"; };
     systemPackages = with pkgs; [
       nix-output-monitor
       nvd
-
-      inputs.nixvim.packages.${system}.default
     ];
   };
 

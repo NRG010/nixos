@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 
-  environment.systemPackages = with pkgs; [ brightnessctl base16-schemes ];
+  environment.systemPackages = with pkgs; [ base16-schemes ];
 
   stylix = {
     enable = true;
@@ -49,6 +49,4 @@
     popups = 0.9;
     terminal = 0.8;
   };
-
-  #stylix.targets.wofi.enable = false;
 }

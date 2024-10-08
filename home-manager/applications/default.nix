@@ -9,6 +9,7 @@
     ./cliphish.nix
     ./gammastep.nix
     ./qutebrowser.nix
+    ./neovim.nix
   ];
 
   home.packages = with pkgs; [

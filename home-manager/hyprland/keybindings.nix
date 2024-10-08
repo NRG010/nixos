@@ -31,7 +31,7 @@
         # Move/Switch to special workspace (scratchpad)
         "$mod+Alt, S, movetoworkspacesilent, special"
         "$mod, S, togglespecialworkspace"
-        "$shiftMod, E, exec, ${pkgs.wofi-emoji}/bin/wofi-emoji" # Emoji picker with wofi
+        "$shiftMod, E, exec, ${pkgs.wofi-emoji}/bin/wofi-emoji"
       ]
       # workspaces
         ++ (builtins.concatLists (builtins.genList (i:
