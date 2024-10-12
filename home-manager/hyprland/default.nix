@@ -6,19 +6,20 @@ let
 in {
 
   imports = [
-    ./animations.nix
-    ./keybindings.nix
+    ./wofi.nix
     ./layouts.nix
     ./settings.nix
-
-    ./wofi.nix
+    ./animations.nix
+    ./environment.nix
+    ./keybindings.nix
+    ./windowrules.nix
   ];
 
   home.packages = with pkgs; [
-    qt5.qtwayland
-    qt6.qtwayland
     qt5ct
     qt6ct
+    qt5.qtwayland
+    qt6.qtwayland
 
     wofi-emoji
     wl-clipboard
@@ -26,7 +27,6 @@ in {
   ];
 
   wayland.windowManager.hyprland = {
-    enable = true;
     settings = {
       exec-once = "$(startupScript)/bin/start";
 
@@ -57,14 +57,6 @@ in {
         force_default_wallpaper = 0;
       };
       xwayland = { force_zero_scaling = true; };
-
-      # █░█░█ █ █▄░█ █▀▄ █▀█ █░█░█   █▀█ █░█ █░░ █▀▀ █▀
-      # ▀▄▀▄▀ █ █░▀█ █▄▀ █▄█ ▀▄▀▄▀   █▀▄ █▄█ █▄▄ ██▄ ▄█
-      windowrulev2 = [ "fullscreen,class:^(mpv)$" ];
-
-      # █░░ ▄▀█ █▄█ █▀▀ █▀█   █▀█ █░█ █░░ █▀▀ █▀
-      # █▄▄ █▀█ ░█░ ██▄ █▀▄   █▀▄ █▄█ █▄▄ ██▄ ▄█
-      layerrule = [ "blur,wofi" "blur,kitty" "ignorezero,rofi" ];
     };
   };
 }
