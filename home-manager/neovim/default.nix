@@ -17,7 +17,7 @@ in {
 
       {
         plugin = lualine-nvim;
-        config = toLuaFile ./plugin/lualine-nvim.lua;
+        config = toLuaFile ./plugin/lualine.lua;
       }
 
       {
