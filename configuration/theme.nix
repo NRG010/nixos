@@ -50,7 +50,7 @@
   };
 
   stylix.targets = {
-    btop.enable = true;
+    #btop.enable = true;
     fish.enable = true;
     fzf.enable = true;
     gtk.enable = true;
