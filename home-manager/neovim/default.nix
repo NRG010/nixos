@@ -13,6 +13,7 @@ _: {
 
     extraLuaConfig = ''
       ${builtins.readFile ./options.lua}
+      ${builtins.readFile ./mappings.lua}
     '';
   };
 }
