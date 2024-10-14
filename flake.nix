@@ -19,34 +19,43 @@
 
   outputs = { nixpkgs, stylix, home-manager, ... }@inputs:
 
-    let
-      system = "x86_64-linux";
-      extraSpecialArgs = {
-        inherit system;
-        inherit inputs;
-      };
-      specialArgs = {
-        inherit system;
-        inherit inputs;
-      };
-    in {
-      nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
-          modules = [
-            ./configuration
-            stylix.homeManagerModules.stylix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                inherit extraSpecialArgs;
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.baldev = import ./home-manager;
-              };
-            }
-          ];
-        };
+  let
+    system = "x86_64-linux";
+    extraSpecialArgs = {
+      inherit system;
+      inherit inputs;
+    };
+    specialArgs = {
+      inherit system;
+      inherit inputs;
+    };
+  in {
+
+    nixosConfigurations = {
+      nixos = nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
+        modules = [
+          ./configuration
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              inherit extraSpecialArgs;
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.baldev = import ./home-manager;
+            };
+          }
+        ];
       };
     };
+
+    homeConfigurations.baldev = 
+    home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      modules = [
+        stylix.homeManagerModules.stylix
+        ./home-manager
+      ];
+    };
+  };
 }
