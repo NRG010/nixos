@@ -4,6 +4,7 @@
 
   stylix = {
     enable = true;
+    autoEnable = true;
     polarity = "dark";
     image = ./wallpapers/01.jpg;
     imageScalingMode = "fill";
@@ -47,19 +48,5 @@
     desktop = 0.8;
     popups = 0.8;
     terminal = 0.8;
-  };
-
-  stylix.targets = {
-    #btop.enable = true;
-    fish.enable = true;
-    fzf.enable = true;
-    gtk.enable = true;
-    hyprland.enable = true;
-    kitty.enable = true;
-    neovim.enable = false;
-    qutebrowser.enable = true;
-    wofi.enable = true;
-    yazi.enable = true;
-    zathura.enable = true;
   };
 }
