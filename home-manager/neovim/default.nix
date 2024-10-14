@@ -16,11 +16,6 @@ in {
     plugins = with pkgs.vimPlugins; [
 
       {
-        plugin = lualine-nvim;
-        config = toLuaFile ./plugin/lualine-nvim.lua;
-      }
-
-      {
         plugin = nvim-tree-lua;
         config = toLuaFile ./plugin/tree.lua;
       }
