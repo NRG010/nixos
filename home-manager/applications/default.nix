@@ -13,6 +13,8 @@
     ./starship.nix
 
     ./kitty.nix
+
+    ./neovim.nix
   ];
 
   home.packages = with pkgs; [

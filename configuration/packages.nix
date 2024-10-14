@@ -3,6 +3,8 @@
   environment = {
     sessionVariables = { FLAKE = "/etc/nixos"; };
     systemPackages = with pkgs; [
+      vim
+
       nix-output-monitor
       nvd
 
