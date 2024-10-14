@@ -25,6 +25,8 @@ in {
         config = toLuaFile ./plugin/tree.lua;
       }
 
+      nvim-web-devicons
+
     ];
 
     extraLuaConfig = ''
