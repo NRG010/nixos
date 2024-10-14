@@ -1,6 +1,6 @@
 { input, pkgs, ... }: {
 
-  environment.systemPackages = with pkgs; [ base16-schemes ];
+  home.packages = with pkgs; [ base16-schemes ];
 
   stylix = {
     enable = true;
