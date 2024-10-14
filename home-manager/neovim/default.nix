@@ -20,6 +20,11 @@ in {
         config = toLuaFile ./plugin/lualine-nvim.lua;
       }
 
+      {
+        plugin = nvim-tree-lua;
+        config = toLuaFile ./plugin/tree.lua;
+      }
+
     ];
 
     extraLuaConfig = ''
