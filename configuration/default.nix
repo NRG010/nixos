@@ -8,8 +8,6 @@ _: {
     ./baldev.nix
     ./polkit.nix
 
-    ./theme.nix
-
     ./audio.nix
     ./nvidia.nix
     ./network.nix

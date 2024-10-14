@@ -35,7 +35,7 @@
           inherit specialArgs;
           modules = [
             ./configuration
-            stylix.nixosModules.stylix
+            stylix.homeManagerModules.stylix
             home-manager.nixosModules.home-manager
             {
               home-manager = {

@@ -15,6 +15,8 @@
     ./kitty.nix
 
     ./neovim.nix
+
+    ./theme.nix
   ];
 
   home.packages = with pkgs; [
