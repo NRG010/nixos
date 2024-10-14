@@ -1,10 +1,12 @@
 { pkgs, ... }: {
+
   programs.neovim = 
-  let
-    toLua = str: "lua << EOF\n${str}\nEOF\n";
-    toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-  in
-  {
+
+let
+  toLua = str: "lua << EOF\n${str}\nEOF\n";
+  toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+in {
+
     enable = true;
     viAlias = true;
     vimAlias = true;
@@ -12,7 +14,12 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-      lualine-nvim
+
+      {
+        plugin = lualine-nvim;
+        config = toLuaFile ./plugin/lualine-nvim.lua;
+      }
+
     ];
 
     extraLuaConfig = ''
