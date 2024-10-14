@@ -1,5 +1,7 @@
 _: {
+
   programs = {
+
     mpv = {
       enable = true;
       config = {
@@ -18,5 +20,7 @@ _: {
         downloader-args = "aria2c:'-c -x8 -s8 -k1M'";
       };
     };
+
   };
+
 }

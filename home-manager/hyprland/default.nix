@@ -1,9 +1,4 @@
-{ pkgs, ... }:
-let
-  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    $(pkgs.brightnesscli)/bin/brightnesscli s 500 &
-  '';
-in {
+{ pkgs, ... }: {
 
   imports = [
     ./wofi.nix
@@ -16,6 +11,9 @@ in {
   ];
 
   home.packages = with pkgs; [
+    gtk3
+    gtk4
+
     qt5ct
     qt6ct
     qt5.qtwayland
@@ -23,40 +21,38 @@ in {
 
     wofi-emoji
     wl-clipboard
+
     brightnessctl
   ];
 
-  wayland.windowManager.hyprland = {
-    settings = {
-      exec-once = "$(startupScript)/bin/start";
+  wayland.windowManager.hyprland.settings = {
 
-      # █▀▄▀█ █▀█ █▄░█ █ ▀█▀ █▀█ █▀█
-      # █░▀░█ █▄█ █░▀█ █ ░█░ █▄█ █▀▄
-      monitor = "eDP-1, 1366x768@60, 0x0, 1";
+    exec-once = [
+      "$(pkgs.brightnessctl)/bin/brightnessctl s 500"
+    ];
 
-      # █ █▄░█ █▀█ █░█ ▀█▀
-      # █ █░▀█ █▀▀ █▄█ ░█░
-      input = {
-        kb_layout = "us";
-        follow_mouse = 1;
-        sensitivity = 0;
-        force_no_accel = 1;
-        numlock_by_default = true;
-      };
-      device = {
-        name = "epic mouse V1";
-        sensitivity = -0.5;
-      };
+    monitor = "eDP-1, 1366x768@60, 0x0, 1";
 
-      # █▀▄▀█ █ █▀ █▀▀
-      # █░▀░█ █ ▄█ █▄▄
-      misc = {
-        vrr = 0;
-        disable_hyprland_logo = true;
-        disable_splash_rendering = true;
-        force_default_wallpaper = 0;
-      };
-      xwayland = { force_zero_scaling = true; };
+    input = {
+      kb_layout = "us";
+      follow_mouse = 1;
+      sensitivity = 0;
+      force_no_accel = 1;
+      numlock_by_default = true;
     };
+
+    device = {
+      name = "epic mouse V1";
+      sensitivity = -0.5;
+    };
+
+    misc = {
+      vrr = 0;
+      disable_hyprland_logo = true;
+      disable_splash_rendering = true;
+      force_default_wallpaper = 0;
+    };
+
+    xwayland = { force_zero_scaling = true; };
   };
 }

@@ -1,15 +1,19 @@
 { pkgs, ... }: {
+
   imports = [
     ./mpv.nix
     ./git.nix
-    ./file.nix
-    ./shell.nix
+    ./yazi.nix
+    ./neovim.nix
     ./sysmon.nix
-    ./terminal.nix
     ./cliphish.nix
     ./gammastep.nix
     ./qutebrowser.nix
-    ./neovim.nix
+
+    ./fish.nix
+    ./starship.nix
+
+    ./kitty.nix
   ];
 
   home.packages = with pkgs; [

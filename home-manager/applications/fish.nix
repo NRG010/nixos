@@ -1,0 +1,27 @@
+_: {
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      set fish_greeting
+    '';
+    loginShellInit = ''
+
+      if status is-login
+        if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+          Hyprland
+        end
+      end
+
+      starship init fish | source
+
+    '';
+    shellAbbrs = {
+      xs = "nh os switch";
+      xc = "nh clean all -k 3";
+      dv = "yt-dlp";
+      da = "ani-cli -d -e";
+      nn = "nvim";
+      ns = "sudo nvim";
+    };
+  };
+}

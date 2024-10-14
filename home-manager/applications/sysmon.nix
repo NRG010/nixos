@@ -1,7 +1,10 @@
 _: {
   programs = {
-    fastfetch = { enable = true; };
 
-    btop = { enable = true; };
+    fastfetch.enable = true;
+
+    btop.enable = true;
+
   };
+
 }
