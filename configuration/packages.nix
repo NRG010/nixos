@@ -3,6 +3,7 @@
   environment = {
     sessionVariables = { FLAKE = "/etc/nixos"; };
     systemPackages = with pkgs; [
+      gcc
       libgcc
 
       python3
