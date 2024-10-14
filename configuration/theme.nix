@@ -49,5 +49,5 @@
     popups = 0.8;
     terminal = 0.8;
   };
-  stylix.targets.neovim.enable = false;
+  stylix.targets.vim.enable = false;
 }
