@@ -4,10 +4,12 @@
 
   stylix = {
     enable = true;
+    autoEnable = true;
     polarity = "dark";
     image = ./wallpapers/01.jpg;
     imageScalingMode = "fill";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme =
+    "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
   };
 
   stylix.cursor = {
@@ -26,7 +28,8 @@
       name = "DejaVu Sans";
     };
     monospace = {
-      package = pkgs.nerdfonts.override { fonts = [ "CascadiaCode" ]; };
+      package =
+      pkgs.nerdfonts.override { fonts = [ "CascadiaCode" ]; };
       name = "CaskaydiaCove Nerd Font Mono";
     };
     emoji = {
@@ -48,5 +51,9 @@
     popups = 0.8;
     terminal = 0.8;
   };
-  stylix.targets.console.enable = false;
+
+  stylix.targets = {
+    console.enable = false;
+    nixos-icons.enable = true;
+  };
 }

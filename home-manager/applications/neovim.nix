@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ input, pkgs, ... }: {
   programs.neovim = {
     enable = true;
     viAlias = true;
@@ -6,4 +6,5 @@
     vimdiffAlias = true;
     defaultEditor = true;
   };
+  stylix.targets.neovim.enable = false;
 }
