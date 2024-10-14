@@ -4,7 +4,6 @@
     ./mpv.nix
     ./git.nix
     ./yazi.nix
-    ./neovim.nix
     ./sysmon.nix
     ./cliphish.nix
     ./gammastep.nix

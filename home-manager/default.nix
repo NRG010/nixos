@@ -1,6 +1,6 @@
 _: {
 
-  imports = [ ./applications ./hyprland ];
+  imports = [ ./applications ./hyprland ./neovim ];
 
   home = {
     username = "baldev";
