@@ -20,6 +20,7 @@ in {
         config = toLuaFile ./plugin/tree.lua;
       }
 
+      lualine-nvim
       nvim-web-devicons
 
     ];
