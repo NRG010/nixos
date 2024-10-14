@@ -1,11 +1,11 @@
 local colors = {
-  blue   = '#80a0ff',
-  cyan   = '#79dac8',
-  black  = '#080808',
-  white  = '#c6c6c6',
-  red    = '#ff5189',
-  violet = '#d183e8',
-  grey   = '#303030',
+  blue   = '#89b4fa',
+  cyan   = '#fab387',
+  black  = '#11111b',
+  white  = '#bac2de',
+  red    = '#f38ba8',
+  violet = '#74c7ec',
+  grey   = '#45475a',
 }
 
 local bubbles_theme = {
@@ -36,7 +36,7 @@ require('lualine').setup {
     lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
     lualine_b = { 'filename', 'branch' },
     lualine_c = {
-      '%=', --[[ add your center compoentnts here in place of this comment ]]
+      '%=',
     },
     lualine_x = {},
     lualine_y = { 'filetype', 'progress' },
