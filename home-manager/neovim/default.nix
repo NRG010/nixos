@@ -11,6 +11,10 @@ _: {
     vimdiffAlias = true;
     defaultEditor = true;
 
+    plugins = with pkgs.vimPlugins; [
+      lualine-nvim
+    ];
+
     extraLuaConfig = ''
       ${builtins.readFile ./options.lua}
       ${builtins.readFile ./mappings.lua}
