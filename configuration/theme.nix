@@ -1,10 +1,9 @@
-{ input, pkgs, ... }: {
+{ pkgs, ... }: {
 
-  home.packages = with pkgs; [ base16-schemes ];
+  environment.systemPackages = with pkgs; [ base16-schemes ];
 
   stylix = {
     enable = true;
-    autoEnable = true;
     polarity = "dark";
     image = ./wallpapers/01.jpg;
     imageScalingMode = "fill";
@@ -49,4 +48,5 @@
     popups = 0.8;
     terminal = 0.8;
   };
+  stylix.targets.console.enable = false;
 }

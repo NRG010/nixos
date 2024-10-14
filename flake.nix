@@ -36,6 +36,7 @@
         inherit specialArgs;
         modules = [
           ./configuration
+          stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -47,15 +48,6 @@
           }
         ];
       };
-    };
-
-    homeConfigurations.baldev = 
-    home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      modules = [
-        stylix.homeManagerModules.stylix
-        ./home-manager
-      ];
     };
   };
 }

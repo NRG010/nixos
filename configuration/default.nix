@@ -11,6 +11,8 @@ _: {
     ./audio.nix
     ./nvidia.nix
     ./network.nix
+
+    ./theme.nix
   ];
 
 
