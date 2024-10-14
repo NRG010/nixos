@@ -14,3 +14,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights"
 
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "general save file" })
 vim.keymap.set("n", "<C-c>", "<cmd>%y+<CR>", { desc = "general copy whole file" })
+
+-- nvimtree
+vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
+vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window" })
