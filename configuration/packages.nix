@@ -3,6 +3,13 @@
   environment = {
     sessionVariables = { FLAKE = "/etc/nixos"; };
     systemPackages = with pkgs; [
+      libgcc
+
+      python3
+
+      rustup
+      rust-analyzer
+
       vim
 
       nix-output-monitor
