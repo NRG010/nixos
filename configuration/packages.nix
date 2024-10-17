@@ -3,18 +3,10 @@
   environment = {
     sessionVariables = { FLAKE = "/etc/nixos"; };
     systemPackages = with pkgs; [
-      gcc
-      libgcc
-
-      python3
-
-      rustup
-      rust-analyzer
-
       vim
 
-      nix-output-monitor
       nvd
+      nix-output-monitor
 
       widevine-cdm
     ];

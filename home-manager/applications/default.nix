@@ -4,17 +4,14 @@
     ./mpv.nix
     ./git.nix
     ./yazi.nix
+    ./fish.nix
+    ./kitty.nix
     ./sysmon.nix
+    ./neovim.nix
     ./cliphish.nix
+    ./starship.nix
     ./gammastep.nix
     ./qutebrowser.nix
-
-    ./fish.nix
-    ./starship.nix
-
-    ./kitty.nix
-
-    ./neovim.nix
   ];
 
   home.packages = with pkgs; [

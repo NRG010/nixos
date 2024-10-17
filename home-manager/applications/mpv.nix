@@ -1,7 +1,5 @@
 _: {
-
   programs = {
-
     mpv = {
       enable = true;
       config = {
@@ -10,7 +8,6 @@ _: {
         ytdl-format = "bestvideo+bestaudio";
       };
     };
-
     yt-dlp = {
       enable = true;
       settings = {
@@ -20,7 +17,5 @@ _: {
         downloader-args = "aria2c:'-c -x8 -s8 -k1M'";
       };
     };
-
   };
-
 }

@@ -1,18 +1,14 @@
 _: {
   imports = [
-    ./hardware-configuration.nix
-
-    ./packages.nix
-
-    ./bootloader.nix
-    ./baldev.nix
-    ./polkit.nix
-
-    ./audio.nix
-    ./nvidia.nix
-    ./network.nix
-
     ./theme.nix
+    ./audio.nix
+    ./baldev.nix
+    ./nvidia.nix
+    ./polkit.nix
+    ./network.nix
+    ./packages.nix
+    ./bootloader.nix
+    ./hardware-configuration.nix
   ];
 
 
