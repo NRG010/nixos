@@ -13,11 +13,8 @@ _: {
 
       "LIBVA_DRIVER_NAME,nvidia"
       "GBM_BACKEND,nvidia-drm"
-      "DRI_PRIME,pci-0000_01_00_0"
-      "__NV_PRIME_RENDER_OFFLOAD,1"
       "__VK_LAYER_NV_optimus,NVIDIA_only"
       "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-      "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
     ];
 
     cursor = {
