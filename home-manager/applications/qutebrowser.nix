@@ -6,8 +6,8 @@ _: {
       normal = {
         ",y" = "spawn mpv {url}";
         ",Y" = "hint links spawn mpv {hint-url}";
-        ",l" = "spawn librewolf {url}";
-        ",L" = "hint links spawn librewolf {hint-url}";
+        ",d" = "hint links spawn kitty yt-dlp -f \"bv*[height<=480]+ba/b[height<=480] / wv*+ba/w\" {url}";
+        ",D" = "hint links spawn kitty yt-dlp -f \"bv*[height<=480]+ba/b[height<=480] / wv*+ba/w\" {hint-url}";
       };
     };
 
