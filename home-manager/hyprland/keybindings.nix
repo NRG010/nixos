@@ -14,7 +14,7 @@
     "$browser" = "qutebrowser";
 
     "$menu" = "wofi -I";
-    "$emoji" = "wofi-emoji";
+    "$emoji" = "{pkgs.wofi-emoji}/bin/wofi-emoji";
 
     bind = [
       # Application shortcuts
