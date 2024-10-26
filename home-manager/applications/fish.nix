@@ -14,8 +14,8 @@ _: {
     shellAbbrs = {
       xs = "nh os switch";
       xc = "nh clean all -k 3";
-      dv = "yt-dlp";
       da = "ani-cli -d -e";
+      dv = "yt-dlp";
     };
   };
 }

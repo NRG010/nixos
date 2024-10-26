@@ -52,8 +52,6 @@
     terminal = 0.8;
   };
 
-  stylix.targets = {
-    console.enable = false;
-    nixos-icons.enable = true;
-  };
+  #stylix.targets = {
+  #};
 }
