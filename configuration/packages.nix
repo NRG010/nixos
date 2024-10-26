@@ -3,6 +3,8 @@
   environment = {
     sessionVariables = { FLAKE = "/etc/nixos"; };
     systemPackages = with pkgs; [
+      libgcc
+
       vim
 
       nvd
