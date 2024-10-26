@@ -10,7 +10,6 @@
     ./neovim.nix
     ./cliphish.nix
     ./starship.nix
-    ./gammastep.nix
     ./qutebrowser.nix
   ];
 

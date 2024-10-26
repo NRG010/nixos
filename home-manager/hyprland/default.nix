@@ -3,6 +3,7 @@
   imports = [
     ./wofi.nix
     ./layouts.nix
+    ./wlsunset.nix
     ./settings.nix
     ./animations.nix
     ./environment.nix

@@ -7,11 +7,11 @@
     "$shiftMod" = "SUPER_SHIFT";
 
     # Assign apps
-    "$menu" = "wofi";
+    "$menu" = "wofi -I";
     "$term" = "kitty";
-    "$file" = "kitty yazi";
-    "$sysmon" = "kitty btop";
-    "$editor" = "kitty nvim";
+    "$file" = "$term yazi";
+    "$sysmon" = "$term btop";
+    "$editor" = "$term nvim";
     "$browser" = "qutebrowser";
 
     bind = [
@@ -24,7 +24,7 @@
       "$mod, F, exec, $browser"
       "$mod, Escape, exec, $sysmon"
 
-      "$shiftMod, R, exec, ${pkgs.wofi-emoji}/bin/wofi-emoji"
+      "$shiftMod, R, exec, /usr/bin/wofi-emoji"
       "$mod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
       # Move/Change window focus
