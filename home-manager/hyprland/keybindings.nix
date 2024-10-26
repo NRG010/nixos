@@ -4,7 +4,7 @@
   wayland.windowManager.hyprland.settings = {
 
     "$mod" = "SUPER";
-    "$shiftMod" = "SUPER+SHIFT";
+    "$shiftMod" = "SUPER + Shift";
 
     # Assign apps
     "$term" = "kitty";
