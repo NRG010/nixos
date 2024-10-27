@@ -7,6 +7,7 @@
     nix-output-monitor
     networkmanagerapplet
     networkmanager-openvpn
+    gsettings-desktop-schemas
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg:
