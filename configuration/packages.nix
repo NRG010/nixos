@@ -1,6 +1,7 @@
 { lib, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     obsidian
+    polkit_gnome
     widevine-cdm
     nix-output-monitor
     networkmanagerapplet
