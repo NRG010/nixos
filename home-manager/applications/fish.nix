@@ -12,9 +12,9 @@ _: {
       end
     '';
     shellAbbrs = {
-      xs = "nh os switch";
       xc = "nh clean all -k 3";
-      da = "ani-cli -d -e";
+      xs = "nh os switch";
+      da = "ani-cli";
       dv = "yt-dlp";
     };
   };

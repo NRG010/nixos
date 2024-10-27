@@ -1,4 +1,4 @@
-{ input, pkgs, ... }: {
+_: {
   programs.neovim = {
     enable = true;
     viAlias = true;

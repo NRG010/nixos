@@ -8,8 +8,7 @@
     polarity = "dark";
     image = ./wallpapers/01.jpg;
     imageScalingMode = "fill";
-    base16Scheme =
-    "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
   };
 
   stylix.cursor = {
@@ -39,19 +38,16 @@
   };
 
   stylix.fonts.sizes = {
-    applications = 11;
-    desktop = 11;
-    popups = 10;
+    applications = 10;
+    desktop = 10;
+    popups = 9;
     terminal = 12;
   };
 
   stylix.opacity = {
-    applications = 0.9;
-    desktop = 0.8;
-    popups = 0.8;
+    applications = 1.0;
+    desktop = 1.0;
+    popups = 0.9;
     terminal = 0.8;
   };
-
-  #stylix.targets = {
-  #};
 }

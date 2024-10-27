@@ -1,21 +1,4 @@
 _: {
-  programs = {
-    jq.enable = true;
-    fd.enable = true;
-    ripgrep.enable = true;
-    zathura.enable = true;
-  };
-
-  programs.fzf = {
-    enable = true;
-    enableFishIntegration = true;
-  };
-
-  programs.zoxide = {
-    enable = true;
-    enableFishIntegration = true;
-  };
-
   programs.yazi = {
     enable = true;
     enableFishIntegration = true;

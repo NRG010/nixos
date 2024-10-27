@@ -14,16 +14,11 @@
   home.packages = with pkgs; [
     gtk3
     gtk4
-
-    qt5ct
-    qt6ct
-    qt5.qtwayland
-    qt6.qtwayland
-
     wofi-emoji
     wl-clipboard
-
     brightnessctl
+    qt5.qtwayland
+    qt6.qtwayland
   ];
 
   wayland.windowManager.hyprland.settings = {

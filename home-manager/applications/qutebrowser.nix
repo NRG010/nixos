@@ -1,16 +1,6 @@
 _: {
   programs.qutebrowser = {
     enable = true;
-
-    keyBindings = {
-      normal = {
-        ",y" = "spawn mpv {url}";
-        ",Y" = "hint links spawn mpv {hint-url}";
-        ",d" = "hint links spawn kitty yt-dlp -f \"bv*[height<=480]+ba/b[height<=480] / wv*+ba/w\" {url}";
-        ",D" = "hint links spawn kitty yt-dlp -f \"bv*[height<=480]+ba/b[height<=480] / wv*+ba/w\" {hint-url}";
-      };
-    };
-
     settings = {
       colors.webpage.darkmode.enabled = true;
       auto_save.session = true;
@@ -33,5 +23,14 @@ _: {
         ];
       };
     };
+  };
+
+  programs.qutebrowser.keyBindings.normal = {
+  # Mpv
+    ",y" = "spawn mpv {url}";
+    ",Y" = "hint links spawn mpv {hint-url}";
+  # yt-dlp
+    ",d" = "hint links spawn kitty yt-dlp -f \"bv*[height<=720]+ba/b[height<=720] / wv*+ba/w\" {url}";
+    ",D" = "hint links spawn kitty yt-dlp -f \"bv*[height<=720]+ba/b[height<=720] / wv*+ba/w\" {hint-url}";
   };
 }
