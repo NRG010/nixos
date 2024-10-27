@@ -10,7 +10,6 @@
     ./cliphish.nix
     ./starship.nix
     ./qutebrowser.nix
-    ./environment.nix
   ];
 
   home.packages = with pkgs; [

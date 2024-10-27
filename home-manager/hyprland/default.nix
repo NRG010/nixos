@@ -8,6 +8,7 @@
     ./animations.nix
     ./keybindings.nix
     ./windowrules.nix
+    ./environment.nix
   ];
 
   home.packages = with pkgs; [
