@@ -13,5 +13,5 @@ _: {
   nix.settings.experimental-features = "nix-command flakes";
   i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "Asia/Kolkata";
-  system.stateVersion = "24.05";
+  system.stateVersion = "unstable";
 }

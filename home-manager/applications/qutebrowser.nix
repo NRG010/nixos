@@ -1,6 +1,7 @@
 _: {
   programs.qutebrowser = {
     enable = true;
+    loadAutoconfig = true;
     settings = {
       colors.webpage.darkmode.enabled = true;
       auto_save.session = true;
@@ -17,9 +18,9 @@ _: {
         widgets = [
           "keypress"
           "search_match"
-          "history"
           "scroll"
           "tabs"
+          "progress"
         ];
       };
     };

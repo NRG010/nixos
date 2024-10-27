@@ -14,6 +14,7 @@
   home.packages = with pkgs; [
     gtk3
     gtk4
+    pamixer
     wofi-emoji
     wl-clipboard
     brightnessctl
@@ -24,7 +25,7 @@
   wayland.windowManager.hyprland.settings = {
 
     exec-once = [
-      "$(pkgs.brightnessctl)/bin/brightnessctl s 500"
+      "/usr/bin/brightnessctl s 500"
     ];
 
     monitor = "eDP-1, 1366x768@60, 0x0, 1";

@@ -1,7 +1,6 @@
 _: {
   programs.wofi = {
     enable = true;
-
     settings = {
       show = "drun";
       term = "kitty";

@@ -5,7 +5,7 @@ _: {
       config = {
         profile = "gpu-hq";
         force-window = true;
-        ytdl-format = "bestvideo+bestaudio";
+        ytdl-format = "bv*[height<=720]+ba/b[height<=720] / wv*+ba/w";
       };
     };
     yt-dlp = {

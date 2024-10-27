@@ -1,21 +1,19 @@
 { lib, pkgs, ... }: {
-  environment = {
-    sessionVariables = { FLAKE = "/etc/nixos"; };
-    systemPackages = with pkgs; [
-      vim
-      nvd
-      widevine-cdm
-      nix-output-monitor
-    ];
-  };
+  environment.systemPackages = with pkgs; [
+    obsidian
+    widevine-cdm
+    nix-output-monitor
+    networkmanagerapplet
+    networkmanager-openvpn
+  ];
   nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "widevine-cdm"
-    ];
+  builtins.elem (lib.getName pkg) [
+    "obsidian"
+    "widevine-cdm"
+  ];
   nixpkgs.overlays = [
     (final: prev: { qutebrowser = prev.qutebrowser.override { enableWideVine = true; }; })
   ];
-  programs.nh = {
-    enable = true;
-  };
+  programs.nh.enable = true;
+  environment.sessionVariables.FLAKE = "/etc/nixos";
 }
