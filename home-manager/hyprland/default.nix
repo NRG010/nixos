@@ -6,7 +6,6 @@
     ./wlsunset.nix
     ./settings.nix
     ./animations.nix
-    ./environment.nix
     ./keybindings.nix
     ./windowrules.nix
   ];
@@ -24,16 +23,12 @@
 
   wayland.windowManager.hyprland.settings = {
 
-    exec-once = [
-      "/usr/bin/brightnessctl s 500"
-    ];
-
     monitor = "eDP-1, 1366x768@60, 0x0, 1";
 
     input = {
+      sensitivity = 0;
       kb_layout = "us";
       follow_mouse = 1;
-      sensitivity = 0;
       force_no_accel = 1;
       numlock_by_default = true;
     };
@@ -50,6 +45,6 @@
       force_default_wallpaper = 0;
     };
 
-    xwayland = { force_zero_scaling = true; };
+    xwayland.force_zero_scaling = true;
   };
 }
