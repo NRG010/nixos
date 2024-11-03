@@ -14,6 +14,9 @@
   nixpkgs.overlays = [
   (final: prev: { qutebrowser = prev.qutebrowser.override { enableWideVine = true; }; })
   ];
-
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+  }
   environment.sessionVariables.FLAKE = "/etc/nixos";
 }
