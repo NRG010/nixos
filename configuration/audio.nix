@@ -14,7 +14,6 @@
   hardware.bluetooth = {
     enable = true;
     settings = {
-      AutoEnable = true;
       ControllerMode = "bredr";
       General = {
 	Experimental = true;
