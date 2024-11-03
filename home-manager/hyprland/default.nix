@@ -14,8 +14,6 @@
   home.packages = with pkgs; [
     gtk3
     gtk4
-    qt5ct
-    qt6ct
     pamixer
     wofi-emoji
     wl-clipboard

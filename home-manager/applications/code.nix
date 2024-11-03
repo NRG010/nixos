@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   programs.vscode = {
     enable = true;
     enableUpdateCheck = true;
@@ -10,11 +10,14 @@ _: {
       vscodevim.vim
 
       ms-python.isort
-      ms-python.black
       ms-python.python
       ms-python.debugpy
       njpwerner.autodocstring
-      ms-python.vscode-pylance
     ];
+    userSettings = {
+      "editor.fontFamily" = "CaskaydiaCove Nerd Font Mono";
+      "terminal.integrated.fontFamily" = "CaskaydiaCove Nerd Font Mono";
+      "workbench.colorTheme" = "Catppuccin Mocha";
+    };
   };
 }
