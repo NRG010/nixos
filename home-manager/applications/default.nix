@@ -4,6 +4,7 @@
     ./git.nix
     ./yazi.nix
     ./fish.nix
+    ./code.nix
     ./kitty.nix
     ./sysmon.nix
     ./neovim.nix
