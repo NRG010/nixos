@@ -24,7 +24,7 @@
     };
   in {
     nixosConfigurations = {
-      default = nixpkgs.lib.nixosSystem {
+      nixos = nixpkgs.lib.nixosSystem {
         inherit specialArgs;
         modules = [
           ./configuration

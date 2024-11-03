@@ -17,6 +17,6 @@
   programs.nh = {
     enable = true;
     clean.enable = true;
-  }
+  };
   environment.sessionVariables.FLAKE = "/etc/nixos";
 }
