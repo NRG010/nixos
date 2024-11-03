@@ -30,6 +30,7 @@
   programs = {
     jq.enable = true;
     fd.enable = true;
+    imv.enable = true;
     ripgrep.enable = true;
     zathura.enable = true;
   };

@@ -1,14 +1,13 @@
 { pkgs, ... }: {
-
   environment.systemPackages = with pkgs; [ base16-schemes ];
-
   stylix = {
     enable = true;
     autoEnable = true;
     polarity = "dark";
     image = ./wallpapers/01.jpg;
     imageScalingMode = "fill";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme =
+    "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
   };
 
   stylix.cursor = {

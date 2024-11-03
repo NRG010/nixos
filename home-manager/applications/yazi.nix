@@ -19,6 +19,10 @@ _: {
       run = ''nvim "$@"'';
       block = true;
     }];
+    imv = [{
+      run = ''imv "$@"'';
+      orphan = true;
+    }];
     play = [{
       run = ''mpv "$@"'';
       orphan = true;
@@ -30,6 +34,18 @@ _: {
   };
 
   programs.yazi.settings.open.prepend_rules = [
+    {
+      name = "*.png";
+      use = "imv";
+    }
+    {
+      name = "*.jpg";
+      use = "imv";
+    }
+    {
+      name = "*.gif";
+      use = "mpv";
+    }
     {
       name = "*.cbz";
       use = "zathura";
