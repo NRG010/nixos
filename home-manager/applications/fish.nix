@@ -16,6 +16,7 @@ _: {
       xs = "nh os switch";
       da = "ani-cli";
       dv = "yt-dlp";
+      gb = "git add -A; git commit -am '$(date +%d/%m/%y\ %H:%m)'; git push";
     };
   };
 }
