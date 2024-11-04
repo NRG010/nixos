@@ -2,7 +2,7 @@
   security.polkit.extraConfig = ''
     polkit.addRule(function (action, subject) {
       if (
-        subject.isInGroup("users") &&
+        subject.isInGroup("wheel") &&
         [
           "org.freedesktop.login1.reboot",
           "org.freedesktop.login1.reboot-multiple-sessions",
@@ -12,12 +12,6 @@
       ) {
         return polkit.Result.YES;
       }
-    });
-  '';
-  security.polkit.extraConfig = ''
-    polkit.addRule(function(action, subject) {
-      if (subject.isInGroup("wheel"))
-        return polkit.Result.YES;
     });
   '';
   systemd = {

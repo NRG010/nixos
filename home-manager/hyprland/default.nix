@@ -21,7 +21,7 @@
   ];
   wayland.windowManager.hyprland.settings = {
     monitor = "eDP-1, 1366x768@60, 0x0, 1";
-    exec-once = dbus-update-activation-environment --systemd --all
+    exec-once = "dbus-update-activation-environment --systemd --all";
     input = {
       sensitivity = 0;
       kb_layout = "us";
