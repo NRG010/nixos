@@ -13,12 +13,9 @@
   };
   hardware.bluetooth = {
     enable = true;
-    settings = {
-      ControllerMode = "bredr";
-      General = {
-	Experimental = true;
-        Enable = "Source,Sink,Media,Socket";
-      };
+    settings.General = {
+      Experimental = true;
+      Enable = "Source,Sink,Media,Socket";
     };
   };
   systemd.user.services.mpris-proxy = {
