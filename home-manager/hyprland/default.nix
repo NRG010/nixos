@@ -1,5 +1,4 @@
 { pkgs, ... }: {
-
   imports = [
     ./wofi.nix
     ./layouts.nix
@@ -10,7 +9,6 @@
     ./windowrules.nix
     ./environment.nix
   ];
-
   home.packages = with pkgs; [
     gtk3
     gtk4
@@ -21,11 +19,9 @@
     qt5.qtwayland
     qt6.qtwayland
   ];
-
   wayland.windowManager.hyprland.settings = {
-
     monitor = "eDP-1, 1366x768@60, 0x0, 1";
-
+    exec-once = dbus-update-activation-environment --systemd --all
     input = {
       sensitivity = 0;
       kb_layout = "us";
@@ -33,19 +29,16 @@
       force_no_accel = 1;
       numlock_by_default = true;
     };
-
     device = {
       name = "epic mouse V1";
       sensitivity = -0.5;
     };
-
     misc = {
       vrr = 0;
       disable_hyprland_logo = true;
       disable_splash_rendering = true;
       force_default_wallpaper = 0;
     };
-
     xwayland.force_zero_scaling = true;
   };
 }
