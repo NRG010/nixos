@@ -10,6 +10,7 @@
     ./kitty.nix
     ./neovim.nix
     ./sysmon.nix
+    ./waybar.nix
     ./cliphish.nix
     ./starship.nix
     ./wlsunset.nix
@@ -42,6 +43,7 @@
     jq.enable = true;
     fd.enable = true;
     imv.enable = true;
+    dunst.enable = true;
     ripgrep.enable = true;
     zathura.enable = true;
   };
