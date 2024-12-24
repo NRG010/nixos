@@ -4,6 +4,7 @@ in
 {
   programs.fish = {
     enable = true;
+
     preferAbbrs = true;
     generateCompletions = true;
     shellAbbrs = {
