@@ -1,45 +1,29 @@
 {
   description = "NixOS configuration";
+
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix";
   };
-  outputs = { nixpkgs, stylix, home-manager, ... }@inputs:
-  let
-    system = "x86_64-linux";
-    extraSpecialArgs = {
-      inherit system;
-      inherit inputs;
-    };
-    specialArgs = {
-      inherit system;
-      inherit inputs;
-    };
-  in {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        inherit specialArgs;
-        modules = [
-          ./configuration
-          stylix.nixosModules.stylix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              inherit extraSpecialArgs;
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.baldev = import ./home-manager;
-            };
-          }
-        ];
-      };
+
+  outputs = { nixpkgs, home-manager, stylix, ...}: 
+  {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./nixos
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.baldev = import ./home;
+        }
+        stylix.nixosModules.stylix
+      ];
     };
   };
 }
