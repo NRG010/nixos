@@ -8,6 +8,7 @@
     ./yazi.nix
     ./wofi.nix
     ./kitty.nix
+    ./neovim.nix
     ./sysmon.nix
     ./cliphish.nix
     ./starship.nix

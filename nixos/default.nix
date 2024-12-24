@@ -2,7 +2,6 @@
 
 {
   imports = [ 
-    ./neve.nix
     ./grub.nix
     ./audio.nix
     ./users.nix
