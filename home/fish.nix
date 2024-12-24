@@ -1,5 +1,5 @@
 let
-  date = "date +%d/%m/%y-%H:%m";
+  date = "";
 in
 {
   programs.fish = {
@@ -10,7 +10,7 @@ in
       nu = "nix flake update";
       nc = "nix-collect-garbage -d";
       nr = "sudo nixos-rebuild switch --flake ~/.nix-config/#nixos";
-      gb = "git add -A;git commit -am "$date";git push";
+      gb = "git add -A;git commit -am $(date +%d/%m/%y-%H:%m);git push";
     };
     loginShellInit = ''
       if status is-login
