@@ -2,7 +2,6 @@
   programs.fish = {
     enable = true;
     preferAbbrs = true;
-    enableCompletion = true;
     generateCompletions = true;
     shellAbbrs = {
       nu = "nix flake update";
