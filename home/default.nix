@@ -9,7 +9,6 @@
     ./wofi.nix
     ./kitty.nix
     ./sysmon.nix
-    ./neovim.nix
     ./cliphish.nix
     ./starship.nix
     ./wlsunset.nix
