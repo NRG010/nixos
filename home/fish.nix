@@ -9,13 +9,13 @@
       nr = "sudo nixos-rebuild switch --flake ~/.nix-config/#nixos";
       gb = 'git add -A;git commit -am "$(date +%d/%m/%y-%H:%m)";git push';
     };
-    loginShellInit = """
+    loginShellInit = ''
       if status is-login
-        if test -z "\$DISPLAY" -a "\$XDG_VTNR" = 1
+        if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
           Hyprland
         end
       end
       starship init fish | source
-    """;
+    '';
   };
 }
