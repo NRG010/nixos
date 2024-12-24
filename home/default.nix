@@ -43,7 +43,6 @@
     jq.enable = true;
     fd.enable = true;
     imv.enable = true;
-    dunst.enable = true;
     ripgrep.enable = true;
     zathura.enable = true;
   };
@@ -57,4 +56,6 @@
     enable = true;
     enableBashIntegration = true;
   };
+
+  services.dunst.enable = true;
 }
