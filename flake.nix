@@ -14,7 +14,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, nvchad4nix, ...}: 
+  outputs = { self, nixpkgs, home-manager, stylix, nvchad4nix, ...}: 
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
