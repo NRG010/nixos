@@ -1,5 +1,5 @@
 let
-  date = $(date +%d/%m/%y-%H:%m);
+  date = "date +%d/%m/%y-%H:%m";
 in
 {
   programs.fish = {
