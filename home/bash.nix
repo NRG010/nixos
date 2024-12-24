@@ -3,6 +3,13 @@ _:
 {
   programs.bash = {
     enable = true;
+    enableCompletion = true;
+    historyIgnore = [
+      "yy"
+      "nu"
+      "nr"
+      "gb"
+    ];
     shellAliases = {
       nu = "nix flake update";
       nr = "sudo nixos-rebuild switch --flake ~/.nix-config/#nixos";
