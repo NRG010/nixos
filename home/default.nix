@@ -10,11 +10,10 @@
     ./kitty.nix
     ./neovim.nix
     ./sysmon.nix
-    ./waybar.nix
     ./cliphish.nix
+    ./hyprland.nix
     ./starship.nix
     ./wlsunset.nix
-    ./hyprland.nix
     ./qutebrowser.nix
   ];
 
