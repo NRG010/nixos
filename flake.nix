@@ -8,9 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
+    nvchad4nix = {
+      url = "github:nix-community/nix4nvchad";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, ...}: 
+  outputs = { nixpkgs, home-manager, stylix, nvchad4nix, ...}: 
   {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -18,6 +22,13 @@
         ./nixos
         home-manager.nixosModules.home-manager
         {
+	  nixpkgs = {
+            overlays = [
+              (final: prev: {
+                nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad;
+              })
+            ];
+          };
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.baldev = import ./home;
