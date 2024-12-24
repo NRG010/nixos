@@ -19,10 +19,12 @@
     system = "x86_64-linux";
     lib = nixpkgs.lib;
     pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+    extraSpecialArgs = { inherit system; inherit inputs; };
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
       modules = [
+        inherit specialArgs;
         ./nixos
         home-manager.nixosModules.home-manager
         {
