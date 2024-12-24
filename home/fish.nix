@@ -4,6 +4,7 @@
     preferAbbrs = true;
     generateCompletions = true;
     shellAbbrs = {
+
       nu = "nix flake update";
       nc = "nix-collect-garbage -d";
       nr = "sudo nixos-rebuild switch --flake ~/.nix-config/#nixos";
