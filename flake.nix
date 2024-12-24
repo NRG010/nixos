@@ -12,8 +12,8 @@
 
   outputs = {nixpkgs, home-manager, stylix, ...}:
   let
-    system = "x86_64-linux";
     lib = nixpkgs.lib;
+    system = "x86_64-linux";
   in {
     nixosConfigurations.nixos = lib.nixosSystem {
       inherit system;
