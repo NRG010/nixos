@@ -21,10 +21,9 @@
     pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
     specialArgs = { inherit system; inherit inputs; };
   in {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos = lib.nixosSystem {
       inherit system;
       modules = [
-        inherit specialArgs;
         ./nixos
         home-manager.nixosModules.home-manager
         {
@@ -35,6 +34,7 @@
               })
             ];
           };
+          inherit specialArgs;
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.baldev = import ./home;
