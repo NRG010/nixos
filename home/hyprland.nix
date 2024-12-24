@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     pamixer
     wofi-emoji
-    wl-clipboard
     brightnessctl
     qt5.qtwayland
     qt6.qtwayland
