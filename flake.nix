@@ -15,9 +15,13 @@
   };
 
   outputs = { nixpkgs, home-manager, stylix, nvchad4nix, ...}: 
+  let
+    system = "x86_64-linux";
+    lib = nixpkgs.lib;
+    pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
   {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+      inherit system;
       modules = [
         ./nixos
         home-manager.nixosModules.home-manager
