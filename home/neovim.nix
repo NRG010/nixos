@@ -7,8 +7,8 @@ _:
     vimAlias = true;
     vimdiffAlias = true;
     defaultEditor = true;
-    plugins = with pkgs.vimPlugins; [
-      nvim-treesitter.withAllGrammars
+    programs.neovim.plugins = [
+      pkgs.vimPlugins.nvim-treesitter.withAllGrammars
     ];
   };
 }
