@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    vim
     home-manager
     widevine-cdm
   ];

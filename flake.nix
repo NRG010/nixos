@@ -8,9 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
+    Neve.url = "github:redyf/Neve";
   };
 
-  outputs = { nixpkgs, home-manager, stylix, ...}: 
+  outputs = { nixpkgs, home-manager, stylix, Neve, ...}: 
   {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
