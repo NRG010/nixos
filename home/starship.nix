@@ -1,5 +1,3 @@
-_:
-
 {
   programs.starship = {
     enable = true;
@@ -21,7 +19,6 @@ _:
       directory = {
         read_only = " 󰌾";
         truncation_length = 4;
-        style = "bold lavender";
       };
       docker_context.symbol = " ";
       elixir.symbol = " ";
@@ -30,7 +27,6 @@ _:
       fossil_branch.symbol = " ";
       git_branch = {
         symbol = " ";
-        style = "bold mauve";
       };
       golang.symbol = " ";
       guix_shell.symbol = " ";

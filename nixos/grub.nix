@@ -1,5 +1,3 @@
-_: 
-
 {
   boot.loader = {
     efi = {

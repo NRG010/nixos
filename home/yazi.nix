@@ -1,12 +1,9 @@
-_:
-
 {
   programs.yazi = {
     enable = true;
     enableBashIntegration = true;
+    settings.log.enabled = false;
   };
-
-  programs.yazi.settings.log.enabled = false;
 
   programs.yazi.settings.manager = {
     ratio = [ 0 5 3 ];

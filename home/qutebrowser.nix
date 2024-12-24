@@ -1,5 +1,3 @@
-_:
-
 {
   programs.qutebrowser = {
     enable = true;
@@ -26,12 +24,11 @@ _:
         ];
       };
     };
-  };
-
-  programs.qutebrowser.keyBindings.normal = {
-    ",y" = "spawn mpv {url}";
-    ",Y" = "hint links spawn mpv {hint-url}";
-    ",d" = "hint links spawn kitty yt-dlp {url}";
-    ",D" = "hint links spawn kitty yt-dlp {hint-url}";
+    keyBindings.normal = {
+      ",y" = "spawn mpv {url}";
+      ",Y" = "hint links spawn mpv {hint-url}";
+      ",d" = "hint links spawn kitty yt-dlp {url}";
+      ",D" = "hint links spawn kitty yt-dlp {hint-url}";
+    };
   };
 }
