@@ -2,11 +2,11 @@
 
 {
   imports = [
-    ./mpv.nix
     ./git.nix
-    ./bash.nix
-    ./yazi.nix
+    ./mpv.nix
+    ./fish.nix
     ./wofi.nix
+    ./yazi.nix
     ./kitty.nix
     ./neovim.nix
     ./sysmon.nix

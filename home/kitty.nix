@@ -10,6 +10,6 @@
       enable_audio_bell = "no";
       window_padding_width = 5;
     };
-    shellIntegration.enableBashIntegration = true;
+    shellIntegration.enableFishIntegration = true;
   };
 }

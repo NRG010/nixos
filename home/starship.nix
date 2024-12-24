@@ -2,7 +2,7 @@
   programs.starship = {
     enable = true;
     enableTransience = true;
-    enableBashIntegration = true;
+    enableFishIntegration = true;
     settings = {
       add_newline = true;
       character = {
