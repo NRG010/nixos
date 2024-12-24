@@ -5,6 +5,7 @@
     vim
     home-manager
     widevine-cdm
+    youtube-music
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg:
