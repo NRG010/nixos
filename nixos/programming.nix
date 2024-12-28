@@ -16,7 +16,7 @@
     lua-language-server
 
     pyright
-    python314
+    python312
 
     cargo
     rustc
