@@ -15,8 +15,6 @@
     stylua
     lua-language-server
 
-    black
-    isort
     pyright
     python314
 
