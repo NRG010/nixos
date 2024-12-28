@@ -16,9 +16,9 @@
     lua-language-server
 
     pyright
-    python314Full
-    python314Packages.isort
-    python314Packages.black
+    python313Full
+    python313Packages.isort
+    python313Packages.black
 
     cargo
     rustc
