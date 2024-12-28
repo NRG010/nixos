@@ -2,7 +2,7 @@
   programs.fish = {
     enable = true;
     shellAbbrs = {
-      gb = "git add -A; git commit -am '$(date +%d/%m/%y %H:%m)'; git push";
+      gb = "git add -A; git commit -am $(date +%d/%m/%y-%H:%m); git push";
       nr = "sudo nixos-rebuild switch --flake /etc/nixos/#nixos";
     };
     loginShellInit = ''
