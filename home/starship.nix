@@ -1,8 +1,8 @@
 {
   programs.starship = {
     enable = true;
-    enableTransience = true;
-    enableFishIntegration = true;
+    # enableTransience = true;
+    enableBashIntegration = true;
     settings = {
       add_newline = true;
       character = {

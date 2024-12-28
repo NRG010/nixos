@@ -1,7 +1,7 @@
 {
   programs.yazi = {
     enable = true;
-    enableFishIntegration = true;
+    enableBashIntegration = true;
     settings.log.enabled = false;
   };
 

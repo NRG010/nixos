@@ -8,8 +8,4 @@
     vimdiffAlias = true;
     defaultEditor = true;
   };
-
-  programs.neovim.plugins = [
-    pkgs.vimPlugins.nvim-treesitter
-  ];
 }

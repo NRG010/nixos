@@ -4,7 +4,6 @@
   imports = [
     ./git.nix
     ./mpv.nix
-    ./fish.nix
     ./wofi.nix
     ./yazi.nix
     ./kitty.nix

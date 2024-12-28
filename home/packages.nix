@@ -26,12 +26,12 @@
 
   programs.fzf = {
     enable = true;
-    enableFishIntegration = true;
+    enableBashIntegration = true;
   };
 
   programs.zoxide = {
     enable = true;
-    enableFishIntegration = true;
+    enableBashIntegration = true;
   };
 
   services.dunst.enable = true;
