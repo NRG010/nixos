@@ -16,7 +16,7 @@
     lua-language-server
 
     pyright
-    python312Full
+    python312
     python312Packages.isort
     python312Packages.black
 
