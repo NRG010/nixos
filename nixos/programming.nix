@@ -22,7 +22,6 @@
 
     cargo
     rustc
-    rust-analyzer
   ];
 }
 
