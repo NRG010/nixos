@@ -15,13 +15,14 @@
     stylua
     lua-language-server
 
-    black
-    isort
     pyright
     python314Full
+    python314Packages.isort
+    python314Packages.black
 
     cargo
     rustc
+    rust-analyzer
   ];
 }
 
