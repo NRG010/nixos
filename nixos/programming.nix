@@ -16,9 +16,14 @@
     lua-language-server
 
     pyright
-    python312
-    (python312.withPackages
-      (ps: with ps; [ isort black numpy pygame matplotlib ]))
+    python312Full
+    python314Full
+    python312Packages.pip
+    python312Packages.isort
+    python312Packages.black
+    python312Packages.numpy
+    python312Packages.pygame
+    python312Packages.matplotlib
 
     cargo
     rustc
