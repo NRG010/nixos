@@ -1,8 +1,8 @@
 {
   programs.starship = {
     enable = true;
-    # enableTransience = true;
-    enableBashIntegration = true;
+    enableTransience = true;
+    enableFishIntegration = true;
     settings = {
       add_newline = true;
       character = {
@@ -25,9 +25,7 @@
       elm.symbol = " ";
       fennel.symbol = " ";
       fossil_branch.symbol = " ";
-      git_branch = {
-        symbol = " ";
-      };
+      git_branch = { symbol = " "; };
       golang.symbol = " ";
       guix_shell.symbol = " ";
       haskell.symbol = " ";

@@ -9,8 +9,7 @@
     polarity = "dark";
     image = ./wallpapers/castlevania.jpg;
     imageScalingMode = "fill";
-    base16Scheme =
-    "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
   };
 
   stylix.cursor = {
@@ -29,8 +28,7 @@
       name = "DejaVu Sans";
     };
     monospace = {
-      package =
-      pkgs.nerdfonts.override { fonts = [ "CascadiaCode" ]; };
+      package = pkgs.nerdfonts.override { fonts = [ "CascadiaCode" ]; };
       name = "CaskaydiaCove Nerd Font Mono";
     };
     emoji = {
@@ -40,8 +38,8 @@
   };
 
   stylix.fonts.sizes = {
-    applications = 11.5;
-    desktop = 11.5;
+    applications = 11;
+    desktop = 11;
     popups = 9;
     terminal = 12;
   };

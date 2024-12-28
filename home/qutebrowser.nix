@@ -15,20 +15,14 @@
       };
       scrolling.bar = "when-searching";
       statusbar = {
-        widgets = [
-          "keypress"
-          "search_match"
-          "scroll"
-          "tabs"
-          "progress"
-        ];
+        widgets = [ "keypress" "search_match" "scroll" "tabs" "progress" ];
       };
     };
     keyBindings.normal = {
       ",y" = "spawn mpv {url}";
       ",Y" = "hint links spawn mpv {hint-url}";
-      ",d" = "hint links spawn kitty yt-dlp {url}";
-      ",D" = "hint links spawn kitty yt-dlp {hint-url}";
+      ",d" = "hint links spawn alacritty -e yt-dlp {url}";
+      ",D" = "hint links spawn alacritty -e yt-dlp {hint-url}";
     };
   };
 }

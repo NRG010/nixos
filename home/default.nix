@@ -1,20 +1,16 @@
-{ config, pkgs, ... }:
-
 {
   imports = [
     ./git.nix
     ./mpv.nix
-    ./bash.nix
+    ./fish.nix
     ./wofi.nix
     ./yazi.nix
-    ./kitty.nix
-    ./neovim.nix
-    ./sysmon.nix
     ./cliphish.nix
     ./hyprland.nix
     ./packages.nix
     ./starship.nix
     ./wlsunset.nix
+    ./alacritty.nix
     ./qutebrowser.nix
   ];
 

@@ -1,8 +1,6 @@
 {
   networking = {
     hostName = "nixos";
-    networkmanager = {
-      enable = true;
-    };
+    networkmanager = { enable = true; };
   };
 }

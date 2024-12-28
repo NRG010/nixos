@@ -7,6 +7,6 @@
       day = 2000;
       night = 1800;
     };
-    systemdTarget = "hyprland-session.target";   
+    systemdTarget = "hyprland-session.target";
   };
 }

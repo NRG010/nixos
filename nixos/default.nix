@@ -1,7 +1,5 @@
-{ config, lib, pkgs, ... }:
-
 {
-  imports = [ 
+  imports = [
     ./grub.nix
     ./audio.nix
     ./users.nix
@@ -9,7 +7,8 @@
     ./stylix.nix
     ./network.nix
     ./packages.nix
-    ./hardware-configuration.nix
+    ./hardware.nix
+    ./programming.nix
   ];
 
   time.timeZone = "Asia/Kolkata";
@@ -21,11 +20,8 @@
     dates = "weekly";
     options = "--delete-older-than 3d";
   };
-  
-  nix.settings.experimental-features = [
-    "flakes"
-    "nix-command"
-  ];
+
+  nix.settings.experimental-features = [ "flakes" "nix-command" ];
 
   system.stateVersion = "24.11";
 }

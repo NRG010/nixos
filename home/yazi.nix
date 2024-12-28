@@ -1,16 +1,16 @@
 {
   programs.yazi = {
     enable = true;
-    enableBashIntegration = true;
+    enableFishIntegration = true;
     settings.log.enabled = false;
   };
 
   programs.yazi.settings.manager = {
     ratio = [ 0 5 3 ];
     show_hidden = false;
-    sort_dir_first = true;
     sort_reverse = false;
     show_symlink = false;
+    sort_dir_first = true;
   };
 
   programs.yazi.settings.opener = {

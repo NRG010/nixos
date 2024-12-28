@@ -10,13 +10,9 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs = {nixpkgs, home-manager, stylix, ...}:
-  let
-    lib = nixpkgs.lib;
-    system = "x86_64-linux";
-  in {
-    nixosConfigurations.nixos = lib.nixosSystem {
-      inherit system;
+  outputs = { nixpkgs, home-manager, stylix, ... }: {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
       modules = [
         ./nixos
         home-manager.nixosModules.home-manager

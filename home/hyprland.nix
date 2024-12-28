@@ -21,10 +21,7 @@
 
   wayland.windowManager.hyprland.settings = {
     monitor = ",1366x768@60,auto,1";
-    exec-once = [
-      "${pkgs.brightnessctl}/usr/bin/brightnessctl s 500"
-      "dbus-update-activation-environment --systemd --all"
-    ];
+    exec-once = [ "dbus-update-activation-environment --systemd --all" ];
     input = {
       sensitivity = 0;
       kb_layout = "us";
@@ -78,7 +75,7 @@
       "NIXOS_XDG_OPEN_USE_PORTAL,1"
       "_JAVA_AWT_WM_NONREPARENTING,1"
       "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-    ]; 
+    ];
     dwindle = {
       pseudotile = true;
       preserve_split = true;
@@ -93,7 +90,7 @@
     };
     decoration = {
       blur = {
-	vibrancy = 0.1696;
+        vibrancy = 0.1696;
         enabled = true;
         passes = 1;
         size = 3;
@@ -104,12 +101,12 @@
     "$mod" = "Super";
     "$shiftMod" = "Super+Shift";
     # Assign apps
-    "$term" = "kitty";
     "$menu" = "wofi -I";
-    "$file" = "$term yazi";
-    "$sysmon" = "$term btop";
-    "$editor" = "$term nvim";
+    "$term" = "alacritty";
     "$browser" = "qutebrowser";
+    "$file" = "$term -e yazi";
+    "$sysmon" = "$term -e btop";
+    "$editor" = "$term -e nvim";
     "$emoji" = "${pkgs.wofi-emoji}/bin/wofi-emoji";
     "$clip" = "cliphist list | wofi --dmenu | cliphist decode | wl-copy";
     bind = [
@@ -137,12 +134,12 @@
       "$shiftMod, S, movetoworkspacesilent, special"
     ]
     # workspaces
-    ++ (builtins.concatLists (builtins.genList (i:
-      let ws = i + 1;
-      in [
-      "$mod, code:1${toString i}, workspace, ${toString ws}"
-      "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-      ]) 9));
+      ++ (builtins.concatLists (builtins.genList (i:
+        let ws = i + 1;
+        in [
+          "$mod, code:1${toString i}, workspace, ${toString ws}"
+          "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+        ]) 9));
     # mouse movements
     bindm = [
       "$mod, mouse:272, movewindow"

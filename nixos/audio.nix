@@ -1,17 +1,15 @@
-{pkgs, ...}: 
+{ pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    bluez
-  ];
+  environment.systemPackages = with pkgs; [ bluez ];
 
   services.pipewire = {
     enable = true;
-    audio.enable = true;
     alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
     jack.enable = true;
+    audio.enable = true;
+    pulse.enable = true;
+    alsa.support32Bit = true;
   };
 
   hardware.bluetooth = {
