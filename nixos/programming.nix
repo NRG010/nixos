@@ -17,6 +17,11 @@
 
     pyright
     python3
+    python3Packages.black
+    python3Packages.isort
+    python3Packages.numpy
+    python3Packages.pygmae
+    python3Packages.matplotlib
 
     cargo
     rustc
