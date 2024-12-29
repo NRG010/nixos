@@ -3,6 +3,8 @@
 {
   hardware.graphics.enable = true;
 
+  hardware.opengl.driSupport32Bit = true;
+
   services.xserver.videoDriver = [ "nvidia" ];
 
   hardware.nvidia = {
