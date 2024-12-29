@@ -3,6 +3,7 @@
     ./grub.nix
     ./audio.nix
     ./users.nix
+    ./steam.nix
     ./nvidia.nix
     ./stylix.nix
     ./network.nix
