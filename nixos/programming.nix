@@ -20,7 +20,7 @@
     python3Packages.black
     python3Packages.isort
     python3Packages.numpy
-    python3Packages.pygmae
+    python3Packages.pygame
     python3Packages.matplotlib
 
     cargo
