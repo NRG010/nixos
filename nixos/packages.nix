@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -7,9 +7,8 @@
     youtube-music
   ];
 
-  programs.steam.enable = true;
-
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [ "widevine-cdm" ];
 
   nixpkgs.overlays = [
     (final: prev: {
